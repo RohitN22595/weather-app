@@ -1,6 +1,8 @@
 import { HomePage } from './pages/HomePage/HomePage'
-import { WeatherPage } from './pages/WeatherPage/WeatherPage'
-import { Forecast } from './pages/Forecast/Forecast'
+import { Daily } from './pages/Daily/Daily'
+import { Today } from './pages/Today/Today'
+import { Hourly } from './pages/Hourly/Hourly'
+import { Air } from './pages/Air-Pollution/Air'
 import { About } from './pages/About/About'
 import { Routes, Route } from 'react-router'
 import './App.css'
@@ -10,8 +12,10 @@ function App() {
   return (
     <Routes>
         <Route index element={<HomePage />}/>
-        <Route path='/weather/:cityName' element={<WeatherPage />}/>
-        <Route path='/forecast/:cityName' element={<Forecast />}/>
+        <Route path='/today/:cityName' element={<Today />}/>
+        <Route path='/hourly/:cityName' element={<Hourly />}/>
+        <Route path='/daily/:cityName' element={<Daily />}/>
+        <Route path='/air/:cityName' element={<Air />}/>
         <Route path='/about' element={<About />}/>
     </Routes>
   )

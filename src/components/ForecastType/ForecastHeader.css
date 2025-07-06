@@ -1,0 +1,14 @@
+.ForecastHeader{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: antiquewhite;
+    gap: 55px;
+    border-bottom: solid 2px black;
+}
+
+.ForecastHeader p {
+    cursor: pointer;
+}

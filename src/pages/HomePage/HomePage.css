@@ -1,0 +1,188 @@
+.currentcity{
+    height: 100px;
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    backdrop-filter: blur(10px);   /* Controls the blur strength */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    background-color: rgba(0, 0, 0, 0.148); /* Light transparent overlay */
+    margin: 30px;
+    cursor: pointer;
+}
+
+.weatherDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.currentcity div p{
+    color: white;
+}
+
+.title{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 550px;
+}
+
+.iconcontainer{
+    height: 40px;
+    width: 40px;
+}
+
+.iconcontainer img{
+    height: 100%;
+    width: 100%;
+}
+
+/* india */
+
+.popularIndia{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent;
+}
+
+.popularIndia a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.row {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    gap: 20px;
+    background: transparent;
+}
+
+.row::-webkit-scrollbar {
+    display: none;
+}
+.row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.cityImageContainer{
+    height: 200px;
+    width: 200px;
+    flex: 0 0 calc(100% / 5);
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.cityImageContainer p{
+    color: white;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+
+/* container */
+
+.container{
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.containerWrap{
+    background-image: url('/background.jpg');
+    background-size: cover;          /* Ensures the image covers the entire div */
+    background-position: top;     /* Centers the image */
+    background-repeat: no-repeat;
+}
+
+.maincontainer{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.766), transparent);
+
+}
+
+/* AP */
+
+.popularAp{
+    height: 500px;         
+    width: 130px;          
+    overflow: hidden;    
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.popularAp::-webkit-scrollbar {
+    display: none;
+}
+
+.apScrollContent {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-vertical 15s linear infinite;
+}
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%); /* Adjust as needed based on number of items */
+  }
+}
+
+.popularAp a{
+    height: 45px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+/* footer */
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #00c3ff;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+

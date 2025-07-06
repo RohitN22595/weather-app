@@ -1,44 +1,37 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+import './About.css';
 
 export function About() {
   const navigate = useNavigate();
-
   return (
-    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h1>🌤️ About This Weather App</h1>
-      
+    <div className="about-container">
+      <h1>About the Weather App</h1>
       <p>
-        This weather app allows users to check current weather conditions of any city
-        and view a 5-day forecast using data from the OpenWeatherMap API.
+        This weather app provides real-time weather updates and forecasts for popular cities in India, 
+        including Andhra Pradesh and Telangana. It offers features like current weather, 5-day forecasts, 
+        air quality index, and more.
       </p>
 
-      <h2>🛠️ Technologies Used</h2>
+      <h2>My Role</h2>
+      <p>
+        I'm Rohit, a Front-End Developer and a student at IIT Guwahati. I designed and built this app to improve 
+        my skills in React.js, API integration, and responsive UI design. This project also reflects my 
+        interest in building practical tools that are useful for daily life.
+      </p>
+
+      <h2>Key Features</h2>
       <ul>
-        <li>React JS</li>
-        <li>Axios (for API calls)</li>
-        <li>React Router (for navigation)</li>
-        <li>DayJS (for formatting time)</li>
-        <li>OpenWeatherMap API</li>
+        <li>Search and view current weather of any city</li>
+        <li>5-day forecast and climate data</li>
+        <li>Air quality and pollution information</li>
+        <li>Pre-built links to major cities for quick access</li>
+        <li>Responsive layout optimized for all screen sizes</li>
       </ul>
 
-      <h2>👨‍💻 About Me</h2>
-      <p>
-        I'm Rohit, a passionate front-end developer currently studying at IIT Guwahati.
-        I love building real-world web apps and constantly improving my skills.
-        This weather app is part of my portfolio showcasing React projects.
-      </p>
-
-      <h2>📞 Contact Me</h2>
-      <p>
-        📧 Email: <a href="nrss4244@gmail.com">nrss4244@gmail.com</a><br/>
-        📱 Phone: <a href="tel:+919490761562">+91 9490761562</a><br/>
-        💼 GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a><br/>
-        🔗 LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a>
-      </p>
-
-      <button onClick={() => navigate('/')} style={{ marginTop: '20px' }}>
-        ⬅️ Back to Home
-      </button>
+      <h2>Contact</h2>
+      <p><strong>GitHub:</strong> <a href="https://github.com/RohitN22595" target="_blank" rel="noopener noreferrer">github.com/RohitN22595</a></p>
+      <p><strong>Email:</strong> nrss4244@gmail.com</p>
+      <button onClick={()=>{navigate('/')}}>Go Home</button>
     </div>
   );
 }
