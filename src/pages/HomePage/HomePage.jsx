@@ -9,30 +9,24 @@ import { Link } from 'react-router-dom';
 export function HomePage(){
     const [cityName, setCityName] = useState("");
     const [data, setData] = useState({});
-
     const navigate = useNavigate();
 
     const popularIndianCities = ["Delhi","Mumbai","Bangalore","Hyderabad","Chennai","Kolkata","Pune","Ahmedabad","Jaipur","Lucknow"];
     const apCities = ["Visakhapatnam", "Vijayawada", "Guntur", "Tirupati", "Kakinada", "Rajahmundry", "Nellore", "Anantapur", "Kadapa", "Ongole", "Hyderabad", "Warangal", "Nizamabad", "Karimnagar", "Ramagundam", "Khammam", "Mahbubnagar", "Siddipet", "Adilabad", "Nalgonda"];
-    
-    useEffect(()=>{
-
-    },[])
 
     useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
-        loadData(lat, lon)
-        console.log(lat, lon)
-    }, (error) => {
+        loadData(lat, lon);
+        }, (error) => {
         console.error("Location access denied or error", error);
     });
 
     const loadData = async (lat, lon)=>{
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=9512dfa32acada475c46982a00aa80de&units=metric`);
         setData(response.data);
-        console.log(response.data);
+        console.log('today:', response.data);
     }
 
 
@@ -48,7 +42,7 @@ export function HomePage(){
                         <div>
                             <p className='title'>Real-time weather updates, anytime, anywhere.</p>
                             { data && data.main &&
-                                <div className='currentcity' onClick={()=>{navigate('/today/Vetapalem')}}>
+                                <div className='currentcity' onClick={()=>{navigate(`/today/${data.name}`)}}>
                                     <div className='details'>
                                         <p>{data.name}, {data.sys.country}</p>
                                         <div className='weatherDetails'>

@@ -7,6 +7,10 @@
     background-color: antiquewhite;
     gap: 55px;
     border-bottom: solid 2px black;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 3;
 }
 
 .ForecastHeader p {

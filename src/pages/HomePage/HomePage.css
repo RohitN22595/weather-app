@@ -113,6 +113,7 @@
     background-size: cover;          /* Ensures the image covers the entire div */
     background-position: top;     /* Centers the image */
     background-repeat: no-repeat;
+    margin-top: 120px;
 }
 
 .maincontainer{
